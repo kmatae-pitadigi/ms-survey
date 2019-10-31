@@ -5,13 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SurveyComponent } from './survey/survey.component';
 import { FormsModule } from '@angular/forms';
-import { GraphQLModule } from './graphql.module';
+import { GraphQLModule } from './modules/graphql.module';
 import { HttpClientModule } from '@angular/common/http';
+import { SurveyService } from './survey/survey.service';
+import { DiagnosisResultComponent } from './diagnosis-result/diagnosis-result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SurveyComponent,
+    DiagnosisResultComponent,
   ],
   imports: [
     BrowserModule,
@@ -21,7 +24,9 @@ import { HttpClientModule } from '@angular/common/http';
     GraphQLModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    SurveyService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

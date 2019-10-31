@@ -16,8 +16,8 @@
           </td>
           <td>
             <div class="btn-group">
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer1" name="answer1" [(ngModel)]="survey.motivation" mdbWavesEffect mdbRadio="Yes">はい</label>
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer1" name="answer1" [(ngModel)]="survey.motivation" mdbWavesEffect mdbRadio="No">いいえ</label>
+              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer1" name="answer1" [(ngModel)]="survey.motivation" mdbWavesEffect mdbRadio="yes">はい</label>
+              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer1" name="answer1" [(ngModel)]="survey.motivation" mdbWavesEffect mdbRadio="no">いいえ</label>
             </div>
           </td>
         </tr>
@@ -27,8 +27,8 @@
           </td>
           <td>
             <div class="btn-group">
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer2" name="answer2" [(ngModel)]="survey.cleanDesk" mdbWavesEffect mdbRadio="Yes">はい</label>
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer2" name="answer2" [(ngModel)]="survey.cleanDesk" mdbWavesEffect mdbRadio="No">いいえ</label>
+              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer2" name="answer2" [(ngModel)]="survey.cleanDesk" mdbWavesEffect mdbRadio="yes">はい</label>
+              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer2" name="answer2" [(ngModel)]="survey.cleanDesk" mdbWavesEffect mdbRadio="no">いいえ</label>
             </div>
           </td>
         </tr>
@@ -38,8 +38,8 @@
           </td>
           <td>
             <div class="btn-group">
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer3" name="answer3" [(ngModel)]="survey.manual" mdbWavesEffect mdbRadio="Yes">はい</label>
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer3" name="answer3" [(ngModel)]="survey.manual" mdbWavesEffect mdbRadio="No">いいえ</label>
+              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer3" name="answer3" [(ngModel)]="survey.manual" mdbWavesEffect mdbRadio="yes">はい</label>
+              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer3" name="answer3" [(ngModel)]="survey.manual" mdbWavesEffect mdbRadio="no">いいえ</label>
             </div>
             </td>
         </tr>
@@ -49,8 +49,8 @@
           </td>
           <td>
             <div class="btn-group">
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer4" name="answer4" [(ngModel)]="survey.timeManagement" mdbWavesEffect mdbRadio="Yes">はい</label>
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer4" name="answer4" [(ngModel)]="survey.timeManagement" mdbWavesEffect mdbRadio="No">いいえ</label>
+              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer4" name="answer4" [(ngModel)]="survey.timeManagement" mdbWavesEffect mdbRadio="yes">はい</label>
+              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer4" name="answer4" [(ngModel)]="survey.timeManagement" mdbWavesEffect mdbRadio="no">いいえ</label>
             </div>
           </td>
         </tr>
@@ -60,8 +60,8 @@
           </td>
           <td>
             <div class="btn-group">
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer5" name="answer5" [(ngModel)]="survey.telework" mdbWavesEffect mdbRadio="Yes">はい</label>
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer5" name="answer5" [(ngModel)]="survey.telework" mdbWavesEffect mdbRadio="No">いいえ</label>
+              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer5" name="answer5" [(ngModel)]="survey.telework" mdbWavesEffect mdbRadio="yes">はい</label>
+              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer5" name="answer5" [(ngModel)]="survey.telework" mdbWavesEffect mdbRadio="no">いいえ</label>
             </div>
           </td>
         </tr>
@@ -71,9 +71,9 @@
           </td>
           <td>
             <select class="browser-default custom-select" required id="answer6" name="answer6" [(ngModel)]="survey.communication">
-              <option selected value="Phone">電話</option>
-              <option value="Mail">メール</option>
-              <option value="Chat">SNS/チャット</option>
+              <option selected value="phone">電話</option>
+              <option value="mail">メール</option>
+              <option value="chat">SNS/チャット</option>
             </select>    
           </td>
         </tr>
@@ -83,11 +83,11 @@
           </td>
           <td>
             <select class="browser-default custom-select" required id="answer7" name="answer7" [(ngModel)]="survey.informationSharing">
-              <option selected value="Paper">手書きのメモ、紙</option>
-              <option value="FileServer">ファイルサーバー</option>
-              <option value="Mail">メール</option>
-              <option value="Portal">ポータル</option>
-              <option value="Chat">SNS、チャット</option>
+              <option selected value="paper">手書きのメモ、紙</option>
+              <option value="fileserver">ファイルサーバー</option>
+              <option value="mail">メール</option>
+              <option value="portal">ポータル</option>
+              <option value="chat">SNS、チャット</option>
             </select>
           </td>
         </tr>
@@ -97,9 +97,9 @@
           </td>
           <td>
             <select class="browser-default custom-select" required id="answer8" name="answer8" [(ngModel)]="survey.workflow">
-              <option selected value="Paper">手書きの紙</option>
-              <option value="Excel">ExcelまたはWord</option>
-              <option value="Workflow">ワークフローシステム</option>
+              <option selected value="paper">手書きの紙</option>
+              <option value="excel">ExcelまたはWord</option>
+              <option value="workflow">ワークフローシステム</option>
             </select>
           </td>
         </tr>
@@ -109,8 +109,8 @@
           </td>
           <td>
             <div class="btn-group">
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer9" name="answer9" [(ngModel)]="survey.customerManagement" mdbWavesEffect mdbRadio="Yes">はい</label>
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer9" name="answer9" [(ngModel)]="survey.customerManagement" mdbWavesEffect mdbRadio="No">いいえ</label>
+              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer9" name="answer9" [(ngModel)]="survey.customerManagement" mdbWavesEffect mdbRadio="yes">はい</label>
+              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer9" name="answer9" [(ngModel)]="survey.customerManagement" mdbWavesEffect mdbRadio="no">いいえ</label>
             </div>
           </td>
         </tr>
@@ -120,13 +120,16 @@
           </td>
           <td>
             <div class="btn-group">
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer10" name="answer10" [(ngModel)]="survey.profitManagement" mdbWavesEffect mdbRadio="Yes">はい</label>
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer10" name="answer10" [(ngModel)]="survey.profitManagement" mdbWavesEffect mdbRadio="No">いいえ</label>
+              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer10" name="answer10" [(ngModel)]="survey.profitManagement" mdbWavesEffect mdbRadio="yes">はい</label>
+              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer10" name="answer10" [(ngModel)]="survey.profitManagement" mdbWavesEffect mdbRadio="no">いいえ</label>
             </div>
           </td>
         </tr>
       </tbody>
     </table>
     <button mdbBtn type="submit" color="default" [disabled]="!SurveyForm.form.valid && !submitted" mdbWavesEffect>生産性向上の「今」と「これから」をチェック</button>
+    <div class="form-error-message" [hidden]="errorMessage===undefined">
+      <span>{{errorMessage}}</span>
+    </div>
   </form>
 </div>

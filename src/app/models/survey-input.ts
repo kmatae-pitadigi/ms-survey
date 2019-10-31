@@ -1,8 +1,6 @@
-import { ISurvey } from '../interfaces/isurvey';
 import { ISurveyInput } from '../interfaces/isurvey-input';
 
-export class Survey implements ISurvey {
-    id: string;
+export class SurveyInput implements ISurveyInput {
     // 社員はやる気に満ちており、元気に働いている
     motivation: string;
     // 机の上、机の周りはきれいに整頓されている
@@ -23,5 +21,4 @@ export class Survey implements ISurvey {
     customerManagement: string;
     // 売上、経費、利益の状況は最新をすぐに確認できるようになっている
     profitManagement: string;
-
 }

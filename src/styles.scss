@@ -16,3 +16,11 @@ inline-form-control {
   display: inline-block;
   width: unset !important;
 }
+
+.form-error-message {
+  position: relative;
+  top: 0;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}

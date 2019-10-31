@@ -1,17 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { SurveyInput } from '../models/survey-input';
 import { Survey } from '../models/survey';
-import { Apollo } from 'apollo-angular';
-import gql from 'graphql-tag';
-
-const saveSurvey = gql`
-  mutation saveSurvey($survey: Survey!) {
-    saveSurvey(survey: $survey) {
-      result
-      message
-      survey
-    }
-  }
-`;
+import { SurveyService} from './survey.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-survey',
@@ -21,18 +12,29 @@ const saveSurvey = gql`
 export class SurveyComponent implements OnInit {
 
   constructor(
-    private readonly apollo: Apollo,
+    private readonly surveyService: SurveyService,
+    private readonly router: Router,
   ) { }
 
   /**
    * 回答
    */
-  survey: Survey = new Survey();
+  survey: SurveyInput = new SurveyInput();
+
+  /**
+   * サーベイID
+   */
+  id: string;
 
   /**
    * サブミットフラグ
    */
   submitted = false;
+
+  /**
+   * エラーメッセージ
+   */
+  errorMessage: string = undefined;
 
   /**
    * 初期化処理
@@ -43,8 +45,20 @@ export class SurveyComponent implements OnInit {
   /**
    * Submit処理
    */
-  onSubmit() {
+  async onSubmit() {
     // サブミットフラグを設定する
     this.submitted = true;
+    // エラーメッセージを初期化する
+    this.errorMessage = undefined;
+
+    try {
+      // サーベイを保存する
+      const saveSurvey: Survey = await this.surveyService.save(this.survey);
+
+      // 診断結果ページに遷移する
+      this.router.navigateByUrl('result');
+    } catch (error) {
+      this.errorMessage = error.message;
+    }
   }
 }

@@ -8,13 +8,13 @@ import { FormsModule } from '@angular/forms';
 import { GraphQLModule } from './modules/graphql.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SurveyService } from './survey/survey.service';
-import { DiagnosisResultComponent } from './diagnosis-result/diagnosis-result.component';
+import { ResultComponent } from './result/result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SurveyComponent,
-    DiagnosisResultComponent,
+    ResultComponent,
   ],
   imports: [
     BrowserModule,

@@ -53,7 +53,7 @@ export class SurveyComponent implements OnInit {
 
     try {
       // サーベイを保存する
-      const saveSurvey: Survey = await this.surveyService.save(this.survey);
+      await this.surveyService.save(this.survey);
 
       // 診断結果ページに遷移する
       this.router.navigateByUrl('result');

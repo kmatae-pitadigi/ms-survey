@@ -9,12 +9,14 @@ import { GraphQLModule } from './modules/graphql.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SurveyService } from './survey/survey.service';
 import { ResultComponent } from './result/result.component';
+import { ResultDetailComponent } from './result/result-detail/result-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SurveyComponent,
     ResultComponent,
+    ResultDetailComponent,
   ],
   imports: [
     BrowserModule,

@@ -48,7 +48,17 @@ export class SurveyService {
         }
       }).subscribe(({data}) => {
         const ret: any = data;
-        this.survey = ret.save.survey;
+        this.survey = new Survey();
+        this.survey.motivation = ret.save.survey.motivation;
+        this.survey.cleanDesk = ret.save.survey.cleanDesk;
+        this.survey.manual = ret.save.survey.manual;
+        this.survey.timeManagement = ret.save.survey.timeManagement;
+        this.survey.telework = ret.save.survey.telework;
+        this.survey.communication = ret.save.survey.communication;
+        this.survey.informationSharing = ret.save.survey.informationSharing;
+        this.survey.workflow = ret.save.survey.workflow;
+        this.survey.customerManagement = ret.save.survey.customerManagement;
+        this.survey.profitManagement = ret.save.survey.profitManagement;
         resolve(this.survey);
       }, (error) => {
         reject(error);

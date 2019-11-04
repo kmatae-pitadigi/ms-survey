@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SurveyService } from './survey/survey.service';
 import { ResultComponent } from './result/result.component';
 import { ResultDetailComponent } from './result/result-detail/result-detail.component';
+import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ResultDetailComponent } from './result/result-detail/result-detail.comp
     MDBBootstrapModule.forRoot(),
     GraphQLModule,
     HttpClientModule,
+    MarkdownModule.forRoot(),
   ],
   providers: [
     SurveyService,

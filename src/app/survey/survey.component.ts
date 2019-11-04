@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { SurveyInput } from '../models/survey-input';
-import { Survey } from '../models/survey';
 import { SurveyService} from './survey.service';
 import { Router } from '@angular/router';
 

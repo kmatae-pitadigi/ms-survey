@@ -56,7 +56,7 @@ export class SurveyService {
     private readonly apollo: Apollo,
     ) { }
 
-  survey: Survey;
+  survey: Survey = undefined;
 
   async save(surveyInput: ISurveyInput): Promise<ISurvey> {
     return new Promise((resolve, reject) => {

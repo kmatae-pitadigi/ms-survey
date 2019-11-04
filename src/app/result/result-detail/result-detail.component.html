@@ -4,12 +4,14 @@
     </mdb-card-header>
   <mdb-card-body>
     <mdb-card-text>
-      <div class="mb-2">
-        <h4 class="text-primary">
-          {{answer}}
-        </h4>
+      <div>
+        <h1>
+          <span class="badge badge-pill badge-primary float-right">
+            {{answer}}
+          </span>
+        </h1>
       </div>
-      <div class="mb-10">
+      <div>
         <markdown [data]="comment"></markdown>
       </div>
     </mdb-card-text>

@@ -13,34 +13,34 @@ mutation save($survey: SurveyInput!) {
     survey {
       id
       motivation
-      motivationKey
+      motivationRate
       motivationComment
       cleanDesk
-      cleanDeskKey
+      cleanDeskRate
       cleanDeskComment
       manual
-      manualKey
+      manualRate
       manualComment
       timeManagement
-      timeManagementKey
+      timeManagementRate
       timeManagementComment
       telework
-      teleworkKey
+      teleworkRate
       teleworkComment
       communication
-      communicationKey
+      communicationRate
       communicationComment
       informationSharing
-      informationSharingKey
+      informationSharingRate
       informationSharingComment
       workflow
-      workflowKey
+      workflowRate
       workflowComment
       customerManagement
-      customerManagementKey
+      customerManagementRate
       customerManagementComment
       profitManagement
-      profitManagementKey
+      profitManagementRate
       profitManagementComment
     }
   }
@@ -77,43 +77,43 @@ export class SurveyService {
           this.survey = new Survey();
 
           this.survey.motivation = ret.save.survey.motivation;
-          this.survey.motivationKey = ret.save.survey.motivationKey;
+          this.survey.motivationRate = ret.save.survey.motivationRate;
           this.survey.motivationComment = ret.save.survey.motivationComment;
 
           this.survey.cleanDesk = ret.save.survey.cleanDesk;
-          this.survey.cleanDeskKey = ret.save.survey.cleanDeskKey;
+          this.survey.cleanDeskRate = ret.save.survey.cleanDeskRate;
           this.survey.cleanDeskComment = ret.save.survey.cleanDeskComment;
 
           this.survey.manual = ret.save.survey.manual;
-          this.survey.manualKey = ret.save.survey.manualKey;
+          this.survey.manualRate = ret.save.survey.manualRate;
           this.survey.manualComment = ret.save.survey.manualComment;
 
           this.survey.timeManagement = ret.save.survey.timeManagement;
-          this.survey.timeManagementKey = ret.save.survey.timeManagementKey;
+          this.survey.timeManagementRate = ret.save.survey.timeManagementRate;
           this.survey.timeManagementComment = ret.save.survey.timeManagementComment;
 
           this.survey.telework = ret.save.survey.telework;
-          this.survey.teleworkKey = ret.save.survey.teleworkKey;
+          this.survey.teleworkRate = ret.save.survey.teleworkRate;
           this.survey.teleworkComment = ret.save.survey.teleworkComment;
 
           this.survey.communication = ret.save.survey.communication;
-          this.survey.communicationKey = ret.save.survey.communicationKey;
+          this.survey.communicationRate = ret.save.survey.communicationRate;
           this.survey.communicationComment = ret.save.survey.communicationComment;
 
           this.survey.informationSharing = ret.save.survey.informationSharing;
-          this.survey.informationSharingKey = ret.save.survey.informationSharingKey;
+          this.survey.informationSharingRate = ret.save.survey.informationSharingRate;
           this.survey.informationSharingComment = ret.save.survey.informationSharingComment;
 
           this.survey.workflow = ret.save.survey.workflow;
-          this.survey.workflowKey = ret.save.survey.workflowKey;
+          this.survey.workflowRate = ret.save.survey.workflowRate;
           this.survey.workflowComment = ret.save.survey.workflowComment;
 
           this.survey.customerManagement = ret.save.survey.customerManagement;
-          this.survey.customerManagementKey = ret.save.survey.customerManagementKey;
+          this.survey.customerManagementRate = ret.save.survey.customerManagementRate;
           this.survey.customerManagementComment = ret.save.survey.customerManagementComment;
 
           this.survey.profitManagement = ret.save.survey.profitManagement;
-          this.survey.profitManagementKey = ret.save.survey.profitManagementKey;
+          this.survey.profitManagementRate = ret.save.survey.profitManagementRate;
           this.survey.profitManagementComment = ret.save.survey.profitManagementComment;
 
           resolve(this.survey);

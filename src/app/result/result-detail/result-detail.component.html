@@ -4,11 +4,12 @@
     </mdb-card-header>
   <mdb-card-body>
     <mdb-card-text>
-      <div>
+      <div class="float-right">
         <h1>
-          <span class="badge badge-pill badge-primary float-right">
+          <mdb-badge pill="true" primary="true">
             {{answer}}
-          </span>
+            <span class="badge badge-info badge-pill ml-2">{{rate |  number : '1.1-1'}}%</span>
+          </mdb-badge>
         </h1>
       </div>
       <div>

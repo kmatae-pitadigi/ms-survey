@@ -24,6 +24,11 @@ export class ResultDetailComponent implements OnInit {
    */
   @Input() comment: string;
 
+  /**
+   * 回答率
+   */
+  @Input() rate: number;
+
   ngOnInit() {
   }
 }

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "pm2-runtime ./bin/www",
+    "start": "pm2-runtime ./www",
     "build": "ng build --prod",
     "build:staging": "ng build ----configuration=staging",
     "test": "ng test",

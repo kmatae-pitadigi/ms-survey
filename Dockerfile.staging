@@ -1,7 +1,5 @@
 # 環境
-# サーバー: Node.js,NestJS,GraphQL,TypeORM,PostgreSQL
-# ビルド環境
-#   サーバー: webpack+gulp
+# サーバー: Node.js,NestJS,GraphQL,TypeORM,MongoDB
 
 # 使用するNode.jsのバージョンを設定(alpineではbycryptの関係でエラーになる)
 FROM node:10.16.3-alpine

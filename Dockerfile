@@ -1,10 +1,10 @@
 # 環境
-# サーバー: Node.js,Express
+# サーバー: nginx
 # クライアント: Angular8
 # ビルド環境: ng build
 
 # 使用するNode.jsのバージョンを設定
-FROM node:10.16.3-alpine
+FROM node:10.16.3-alpine as build-stage
 
 # 作業フォルダを指定
 WORKDIR /app
@@ -13,13 +13,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 
 # 必要なパッケージをインストールする
-RUN npm ci
-
-# PM2をインストールする
-RUN npm install pm2 -g
-
-# Angular/cliをインストールする
-RUN npm install @angular/cli@8.3.14 -g
+RUN npm install
 
 # ソースをコピーする(コピーしないファイルは.dockerignoreで制御)
 COPY . .
@@ -30,5 +24,9 @@ ENV NODE_ENV=production
 # Angularアプリケーションをビルドする
 RUN npm run build
 
-# Angularアプリケーションを実行する
-CMD ["pm2-runtime", "/app/bin/www"]
+# NGINX環境をセットアップする
+FROM nginx:latest
+
+COPY --from=build-stage /app/dist/ /usr/share/nginx/html
+
+COPY /app/nginx.conf /etc/nginx/nginx.conf

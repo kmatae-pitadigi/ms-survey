@@ -19,7 +19,7 @@ RUN npm ci
 RUN npm install pm2 -g
 
 # Angular/cliをインストールする
-RUN npm install @angular/cli -g
+RUN npm install @angular/cli@8.3.14 -g
 
 # ソースをコピーする(コピーしないファイルは.dockerignoreで制御)
 COPY . .

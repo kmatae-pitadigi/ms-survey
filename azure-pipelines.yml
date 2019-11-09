@@ -23,6 +23,6 @@ variables:
 steps:
 - script: |
     docker build  -f Dockerfile -t $(dockerUrl)/$(imageName) .
-    docker login $(dockerUrl)
+    az acr login --name $(dockerId)
     docker push $(dockerUrl)/$(imageName)
   displayName: Build Docker image

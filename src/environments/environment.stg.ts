@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    api_server: 'https://ms-survey-api-st.azurewebsites.net/graphql'
+    api_server: 'https://pitadigi-ms-survey-api-st.azurewebsites.net/graphql'
 };

@@ -15,7 +15,7 @@ pool:
 variables:
 - group: minnasmile-azurecr
 - name: dockerId
-  value: minnasmile
+  value: minnasmilest
 - name: imageName
   value: ms-survey-st:latest
 - name: dockerUrl

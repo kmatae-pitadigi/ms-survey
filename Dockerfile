@@ -4,7 +4,7 @@
 # ビルド環境: ng build
 
 # 使用するNode.jsのバージョンを設定
-FROM node:10.16.3-alpine as build-stage
+FROM node:10.16.3-alpine as builder
 
 # 作業フォルダを指定
 WORKDIR /app

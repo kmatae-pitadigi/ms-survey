@@ -13,11 +13,11 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-- group: pitadigi
+- group: minnasmile
 - name: dockerId
-  value: pitadigi
+  value: minnasmile
 - name: imageName
-  value: ms-survey:latest
+  value: pitadigi-ms-survey:latest
 - name: dockerUrl
   value: $(dockerId).azurecr.io
 

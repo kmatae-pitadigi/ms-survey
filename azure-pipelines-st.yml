@@ -13,7 +13,6 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-- group: minnasmile
 - name: dockerId
   value: minnasmile
 - name: imageName
@@ -24,6 +23,6 @@ variables:
 steps:
 - script: |
     docker build  -f Dockerfile.staging -t $(dockerUrl)/$(imageName) .
-    docker login -u $(dockerId) -p $(dockerPassword) $(dockerUrl)
+    docker login -u $(dockerId) $(dockerUrl)
     docker push $(dockerUrl)/$(imageName)
   displayName: Build Docker image

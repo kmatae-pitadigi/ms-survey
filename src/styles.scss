@@ -1,6 +1,6 @@
 html {
   font-size: 100%;
-  @media (min-width: 600px) {
+  @media (min-width: 800px) {
     font-size: calc(112.5% + 4 * (100vw - 600px) / 400);
   }
   @media (min-width: 1000px) {

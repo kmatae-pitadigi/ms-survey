@@ -4,133 +4,151 @@
     <h1 class="title">生産性向上サーベイ</h1>
   </div>
 
-  <form class="text-center border border-light p-5" #SurveyForm="ngForm" name="SurveyForm" action method="post" (ngSubmit)="onSubmit()">
-    <p class="h6">
-      10個の質問に答えると、生産性向上への取り組みの「今」と「これから」が分かる
-    </p>
-    <table mdbTable striped="true">
-      <tbody>
-        <tr>
-          <td class="align-middle text-left">
-            社員はやる気に満ちており、元気に働いている
-          </td>
-          <td>
-            <div class="btn-group">
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer1" name="answer1" [(ngModel)]="survey.motivation" mdbWavesEffect mdbRadio="yes">はい</label>
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer1" name="answer1" [(ngModel)]="survey.motivation" mdbWavesEffect mdbRadio="no">いいえ</label>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="align-middle text-left">
-            机の上、机の周りはきれいに整頓されている
-          </td>
-          <td>
-            <div class="btn-group">
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer2" name="answer2" [(ngModel)]="survey.cleanDesk" mdbWavesEffect mdbRadio="yes">はい</label>
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer2" name="answer2" [(ngModel)]="survey.cleanDesk" mdbWavesEffect mdbRadio="no">いいえ</label>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="align-middle text-left">
-            社内の業務はマニュアル化しており、必要な社員で共有できている
-          </td>
-          <td>
-            <div class="btn-group">
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer3" name="answer3" [(ngModel)]="survey.manual" mdbWavesEffect mdbRadio="yes">はい</label>
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer3" name="answer3" [(ngModel)]="survey.manual" mdbWavesEffect mdbRadio="no">いいえ</label>
-            </div>
-            </td>
-        </tr>
-        <tr>
-          <td class="align-middle text-left">
-            業務にかかっている時間を把握し、改善に活かしている
-          </td>
-          <td>
-            <div class="btn-group">
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer4" name="answer4" [(ngModel)]="survey.timeManagement" mdbWavesEffect mdbRadio="yes">はい</label>
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer4" name="answer4" [(ngModel)]="survey.timeManagement" mdbWavesEffect mdbRadio="no">いいえ</label>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="align-middle text-left">
-            テレワーク、在宅ワークができる環境を整備し、実際に利用している社員がいる
-          </td>
-          <td>
-            <div class="btn-group">
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer5" name="answer5" [(ngModel)]="survey.telework" mdbWavesEffect mdbRadio="yes">はい</label>
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer5" name="answer5" [(ngModel)]="survey.telework" mdbWavesEffect mdbRadio="no">いいえ</label>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="align-middle text-left">
-            社員同士の連絡は、主に「○○○」で行うことが多い
-          </td>
-          <td>
-            <select class="browser-default custom-select" required id="answer6" name="answer6" [(ngModel)]="survey.communication">
-              <option selected value="phone">電話</option>
-              <option value="mail">メール</option>
-              <option value="chat">SNS/チャット</option>
-            </select>    
-          </td>
-        </tr>
-        <tr>
-          <td class="align-middle text-left">
-            社内の情報は、主に「○○○」で共有している
-          </td>
-          <td>
-            <select class="browser-default custom-select" required id="answer7" name="answer7" [(ngModel)]="survey.informationSharing">
-              <option selected value="paper">手書きのメモ、紙</option>
-              <option value="fileserver">ファイルサーバー</option>
-              <option value="mail">メール</option>
-              <option value="portal">ポータル</option>
-              <option value="chat">SNS、チャット</option>
-              <option value="storage">ストレージサービス</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td class="align-middle text-left">
-            社内手続は、主に「○○○」で行っている
-          </td>
-          <td>
-            <select class="browser-default custom-select" required id="answer8" name="answer8" [(ngModel)]="survey.workflow">
-              <option selected value="paper">手書きの紙</option>
-              <option value="excel">ExcelまたはWord</option>
-              <option value="workflow">ワークフローサービス</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td class="align-middle text-left">
-            顧客情報は、顧客の属性、顧客に付随する情報(案件、問合せなど)を含め一元管理できている
-          </td>
-          <td>
-            <div class="btn-group">
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer9" name="answer9" [(ngModel)]="survey.customerManagement" mdbWavesEffect mdbRadio="yes">はい</label>
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer9" name="answer9" [(ngModel)]="survey.customerManagement" mdbWavesEffect mdbRadio="no">いいえ</label>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="align-middle text-left">
-            売上、経費、利益の状況は最新をすぐに確認できるようになっている
-          </td>
-          <td>
-            <div class="btn-group">
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer10" name="answer10" [(ngModel)]="survey.profitManagement" mdbWavesEffect mdbRadio="yes">はい</label>
-              <label mdbBtn color="primary" class="form-coltrol text-nowrap" required id="answer10" name="answer10" [(ngModel)]="survey.profitManagement" mdbWavesEffect mdbRadio="no">いいえ</label>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <button mdbBtn type="submit" color="default" [disabled]="!SurveyForm.form.valid && !submitted" mdbWavesEffect>生産性向上の「今」と「これから」をチェック</button>
-    <div class="form-error-message" [hidden]="errorMessage===undefined">
-      <span>{{errorMessage}}</span>
+  <form class="border border-light p-5" #SurveyForm="ngForm" name="SurveyForm" action method="post" (ngSubmit)="onSubmit()">
+    <div class="row mb-5">
+      <div class="col-md-12">
+        <p class="h6 text-center">
+          10個の質問に答えると、生産性向上への取り組みの「今」と「これから」が分かる
+        </p>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-md-8">          
+        社員はやる気に満ちており、元気に働いている
+      </div>
+      <div class="col-md-4">          
+        <div class="btn-group w-100">
+          <label mdbBtn color="primary" class="form-coltrol text-nowrap ml-1 mr-1" required id="answer1" name="answer1" [(ngModel)]="survey.motivation" mdbWavesEffect mdbRadio="yes">はい</label>
+          <label mdbBtn color="light" class="form-coltrol text-nowrap ml-1 mr-1" required id="answer1" name="answer1" [(ngModel)]="survey.motivation" mdbWavesEffect mdbRadio="no">いいえ</label>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-md-8">          
+        机の上、机の周りはきれいに整頓されている
+      </div>
+      <div class="col-md-4">          
+        <div class="btn-group w-100">
+          <label mdbBtn color="primary" class="form-coltrol text-nowrap ml-1 mr-1" required id="answer2" name="answer2" [(ngModel)]="survey.cleanDesk" mdbWavesEffect mdbRadio="yes">はい</label>
+          <label mdbBtn color="light" class="form-coltrol text-nowrap ml-1 mr-1" required id="answer2" name="answer2" [(ngModel)]="survey.cleanDesk" mdbWavesEffect mdbRadio="no">いいえ</label>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-md-8">          
+        社内の業務はマニュアル化しており、必要な社員で共有できている
+      </div>
+      <div class="col-md-4">          
+        <div class="btn-group w-100">
+          <label mdbBtn color="primary" class="form-coltrol text-nowrap ml-1 mr-1" required id="answer3" name="answer3" [(ngModel)]="survey.manual" mdbWavesEffect mdbRadio="yes">はい</label>
+          <label mdbBtn color="light" class="form-coltrol text-nowrap ml-1 mr-1" required id="answer3" name="answer3" [(ngModel)]="survey.manual" mdbWavesEffect mdbRadio="no">いいえ</label>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-md-8">          
+        業務にかかっている時間を把握し、改善に活かしている
+      </div>
+      <div class="col-md-4">          
+        <div class="btn-group w-100">
+          <label mdbBtn color="primary" class="form-coltrol text-nowrap ml-1 mr-1" required id="answer4" name="answer4" [(ngModel)]="survey.timeManagement" mdbWavesEffect mdbRadio="yes">はい</label>
+          <label mdbBtn color="light" class="form-coltrol text-nowrap ml-1 mr-1" required id="answer4" name="answer4" [(ngModel)]="survey.timeManagement" mdbWavesEffect mdbRadio="no">いいえ</label>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-md-8">          
+        テレワーク、在宅ワークができる環境を整備し、実際に利用している社員がいる
+      </div>
+      <div class="col-md-4">          
+        <div class="btn-group w-100">
+          <label mdbBtn color="primary" class="form-coltrol text-nowrap ml-1 mr-1" required id="answer5" name="answer5" [(ngModel)]="survey.telework" mdbWavesEffect mdbRadio="yes">はい</label>
+          <label mdbBtn color="light" class="form-coltrol text-nowrap ml-1 mr-1" required id="answer5" name="answer5" [(ngModel)]="survey.telework" mdbWavesEffect mdbRadio="no">いいえ</label>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-md-8">          
+        社員同士の連絡は、主に「○○○」で行うことが多い
+      </div>
+      <div class="col-md-4">          
+        <select class="browser-default custom-select" required id="answer6" name="answer6" [(ngModel)]="survey.communication">
+          <option selected value="phone">電話</option>
+          <option value="mail">メール</option>
+          <option value="chat">SNS/チャット</option>
+        </select>    
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-md-8">          
+        社内の情報は、主に「○○○」で共有している
+      </div>
+      <div class="col-md-4">          
+        <select class="browser-default custom-select" required id="answer7" name="answer7" [(ngModel)]="survey.informationSharing">
+          <option selected value="paper">手書きのメモ、紙</option>
+          <option value="fileserver">ファイルサーバー</option>
+          <option value="mail">メール</option>
+          <option value="portal">ポータル</option>
+          <option value="chat">SNS、チャット</option>
+          <option value="storage">ストレージサービス</option>
+        </select>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-md-8">          
+        社内手続は、主に「○○○」で行っている
+      </div>
+      <div class="col-md-4">          
+        <select class="browser-default custom-select" required id="answer8" name="answer8" [(ngModel)]="survey.workflow">
+          <option selected value="paper">手書きの紙</option>
+          <option value="excel">ExcelまたはWord</option>
+          <option value="workflow">ワークフローサービス</option>
+        </select>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-md-8">          
+        顧客情報は、顧客の属性、顧客に付随する情報(案件、問合せなど)を含め一元管理できている
+      </div>
+      <div class="col-md-4">          
+        <div class="btn-group w-100">
+          <label mdbBtn color="primary" class="form-coltrol text-nowrap ml-1 mr-1" required id="answer9" name="answer9" [(ngModel)]="survey.customerManagement" mdbWavesEffect mdbRadio="yes">はい</label>
+          <label mdbBtn color="light" class="form-coltrol text-nowrap ml-1 mr-1" required id="answer9" name="answer9" [(ngModel)]="survey.customerManagement" mdbWavesEffect mdbRadio="no">いいえ</label>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-md-8">          
+        売上、経費、利益の状況は最新をすぐに確認できるようになっている
+      </div>
+      <div class="col-md-4">          
+        <div class="btn-group w-100">
+          <label mdbBtn color="primary" class="form-coltrol text-nowrap ml-1 mr-1" required id="answer10" name="answer10" [(ngModel)]="survey.profitManagement" mdbWavesEffect mdbRadio="yes">はい</label>
+          <label mdbBtn color="light" class="form-coltrol text-nowrap ml-1 mr-1" required id="answer10" name="answer10" [(ngModel)]="survey.profitManagement" mdbWavesEffect mdbRadio="no">いいえ</label>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-12">
+        <button mdbBtn type="submit" class="align-middle" block="true" color="default" [disabled]="!SurveyForm.form.valid || submitted" mdbWavesEffect>生産性向上の「今」と「これから」をチェック
+        </button>
+      </div>
+    </div>
+    <div class="row mb-2 w-100 mx-auto text-center">
+      <div class="col-md-12">
+        <div *ngIf="submitted">
+          <span>判定中...</span>
+          <div class="spinner-border text-primary" role="status">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-md-12">
+        <div class="form-error-message" [hidden]="errorMessage===undefined">
+          <span>{{errorMessage}}</span>
+        </div>
+      </div>
     </div>
   </form>
 </div>

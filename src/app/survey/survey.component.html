@@ -130,7 +130,17 @@
     </div>
     <div class="row mt-5">
       <div class="col-md-12">
-        <button mdbBtn type="submit" block="true" color="default" [disabled]="!SurveyForm.form.valid && !submitted" mdbWavesEffect>生産性向上の「今」と「これから」をチェック</button>
+        <button mdbBtn type="submit" class="align-middle" block="true" color="default" [disabled]="!SurveyForm.form.valid || submitted" mdbWavesEffect>生産性向上の「今」と「これから」をチェック
+        </button>
+      </div>
+    </div>
+    <div class="row mb-2 w-100 mx-auto text-center">
+      <div class="col-md-12">
+        <div *ngIf="submitted">
+          <span>判定中...</span>
+          <div class="spinner-border text-primary" role="status">
+          </div>
+        </div>
       </div>
     </div>
     <div class="row mb-2">
